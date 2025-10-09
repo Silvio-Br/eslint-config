@@ -22,7 +22,7 @@ publish-snapshot:
   only:
     - develop
   script:
-    - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY publish
+    - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY_SNAPSHOTS publish
   tags:
     - cluster
     - kubernetes
@@ -32,7 +32,7 @@ publish-release:
   only:
     - tags
   script:
-    - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY publish
+    - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY_RELEASES publish
   tags:
     - cluster
     - kubernetes
