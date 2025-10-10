@@ -85,7 +85,7 @@ release:commit-changelog:
   tags:
     - paas
   rules:
-    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|master)$/ && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^(release|hotfix)(.*)$/
+    - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|master)$/ && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^(release|hotfix|feat)(.*)$/
 
 publish-release:
   stage: publish
