@@ -58,7 +58,7 @@ generate-changelog:
 
 release:commit-changelog:
   stage: release
-  image: $REGISTRY_URL/paas/alpine-tools:$ALPINE_TOOLS_VERSION
+  image: $REGISTRY/paas/alpine-tools:latest
   needs:
     - job: generate-changelog
       artifacts: true
