@@ -79,7 +79,7 @@ release:commit-changelog:
       git commit -m "doc($NEW_VERSION): update CHANGELOG"
       git push origin $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME -o ci.skip
   tags:
-    - paas
+    - cluster
   rules:
     - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|master)$/ && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^(release|hotfix|feat)(.*)$/
 
