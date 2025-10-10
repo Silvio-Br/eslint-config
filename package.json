@@ -29,8 +29,11 @@
       "email": "jacques.vernay@intech.lu"
     }
   ],
-  "repository": "github:intech-lu/eslint-config",
-  "homepage": "github:intech-lu/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intech-lu/eslint-config"
+  },
+  "homepage": "https://github.com/intech-lu/eslint-config",
   "license": "MIT",
   "main": "eslint.config.mjs",
   "files": [
