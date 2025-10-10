@@ -30,7 +30,7 @@ publish-snapshot:
 determine-version:
   stage: release
   image:
-    name: orhunp/git-cliff:$GIT_CLIFF_VERSION
+    name: orhunp/git-cliff:latest
     entrypoint: [ "" ]
   script:
     - echo "NEW_VERSION=$(git-cliff --bumped-version -c .gitlab/gitcliff.toml)" > version.env
