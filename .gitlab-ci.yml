@@ -48,7 +48,6 @@ generate-changelog:
     entrypoint: [""]
   variables:
     GIT_STRATEGY: clone
-    GIT_DEPTH: 0
   script:
     - git-cliff -r . -c ./gitlab/gitcliff.conf >> CHANGELOG.md
   rules:
