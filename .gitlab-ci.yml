@@ -96,5 +96,3 @@ publish-release:
   tags:
     - cluster
     - kubernetes
-
-feat
