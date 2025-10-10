@@ -33,7 +33,7 @@ determine-version:
     name: orhunp/git-cliff:latest
     entrypoint: [ "" ]
   script:
-    - echo "NEW_VERSION=$(git-cliff --bumped-version -c .gitlab/gitcliff.conf)" > version.env
+    - echo "NEW_VERSION=$(git-cliff --bumped-version -c .gitlab/gitcliff.toml)" > version.env
   rules:
     - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|master)$/ && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^(release|hotfix|feat)(.*)$/
   artifacts:
@@ -49,7 +49,7 @@ generate-changelog:
   variables:
     GIT_STRATEGY: clone
   script:
-    - git-cliff -r . -c .gitlab/gitcliff.conf >> CHANGELOG.md
+    - git-cliff -r . -c .gitlab/gitcliff.toml >> CHANGELOG.md
   rules:
     - if: $CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ /^(main|master)$/ && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^(release|hotfix|feat)(.*)$/
   artifacts:
