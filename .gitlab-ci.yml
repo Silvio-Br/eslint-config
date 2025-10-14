@@ -1,4 +1,7 @@
-image: node:20-alpine
+default:
+  image: node:20-alpine
+  tags:
+    - cluster
 
 cache:
   key: "$CI_PIPELINE_IID"
@@ -16,7 +19,6 @@ install:
     - npm --userconfig=$NPMRC ci
   tags:
     - cluster
-    - kubernetes
 
 publish-snapshot:
   stage: publish
@@ -24,9 +26,6 @@ publish-snapshot:
     - develop
   script:
     - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY_SNAPSHOTS publish
-  tags:
-    - cluster
-    - kubernetes
 
 publish-release:
   stage: publish
@@ -36,4 +35,3 @@ publish-release:
     - npm --userconfig=$NPMRC --registry=$NPM_REGISTRY_RELEASES publish
   tags:
     - cluster
-    - kubernetes
