@@ -10,9 +10,6 @@ Welcome to the "InTech ESLint Rules" repository, a centralized solution for mana
     3. [Step 2: install ESLint and the InTech rules](#2️⃣-step-2-install-eslint-and-the-intech-rules)
     4. [Step 3: create the ESLint configuration](#3️⃣-step-3-create-the-eslint-configuration)
     5. [Step 4: enjoy 🎉](#4️⃣-step-4-enjoy-🎉)
-2. [Contribute](#🤝-contribute)
-    1. [Development](#💻-development)
-    2. [Deployment](#🚀-deployment)
 
 ## ⚙️ Installation
 
