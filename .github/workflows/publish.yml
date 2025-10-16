@@ -1,0 +1,14 @@
+name: Deploy To Prodcution
+on:
+  release:
+    types: [released]
+
+jobs:
+  release:
+    name: Release pushed tag
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
