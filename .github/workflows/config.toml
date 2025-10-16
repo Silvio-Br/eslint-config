@@ -7,15 +7,12 @@
 
 [changelog]
 # template for the changelog header
-header = """
-\n
-# Changelog\n
-"""
+header = """"""
 # template for the changelog body
 # https://keats.github.io/tera/docs/#introduction
 body = """
 {% for group, commits in commits | group_by(attribute="group") %}
-    ### {{ group | striptags | trim | upper_first }}
+    # {{ group | striptags | trim | upper_first }}
     {% for commit in commits %}
         - {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
             {% if commit.breaking %}[**breaking**] {% endif %}\
