@@ -1,0 +1,55 @@
+{
+  "name": "@intech.lu/eslint-config",
+  "version": "1.0.1",
+  "description": "ESLint rules for InTech projects",
+  "keywords": [
+    "style guide",
+    "lint",
+    "eslint",
+    "prettier",
+    "format",
+    "intech"
+  ],
+  "author": "InTech S.A. <equipe.titane@intech.lu> (https://www.intech.lu)",
+  "contributors": [
+    {
+      "name": "Tristan Chaumont",
+      "email": "tristan.chaumont@intech.lu"
+    },
+    {
+      "name": "Loïc Gasiorowski",
+      "email": "loic.gasiorowski@intech.lu"
+    },
+    {
+      "name": "Silvio Brancati",
+      "email": "silvio.brancati@intech.lu"
+    },
+    {
+      "name": "Jacques Vernay",
+      "email": "jacques.vernay@intech.lu"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intech-lu/eslint-config"
+  },
+  "homepage": "https://github.com/intech-lu/eslint-config",
+  "license": "MIT",
+  "main": "eslint.config.mjs",
+  "files": [
+    "eslint.config.mjs"
+  ],
+  "dependencies": {
+    "@eslint/js": "^9.37.0",
+    "@eslint/json": "^0.13.2",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.4.0",
+    "typescript-eslint": "^8.46.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.37.0"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
